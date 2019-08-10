@@ -19,7 +19,7 @@ body {
   background: repeating-radial-gradient(circle at center, #333 10%, white 20%, #333 20%, white 30%);
   border-radius: 50%;
   transform: rotate(0deg);
-  /* animation: rotate 7s easse-in-out infinite; */
+  animation: rotate 7s ease-in-out infinite;
   box-sizing: border-box;
 }
 

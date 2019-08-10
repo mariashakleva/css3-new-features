@@ -7,16 +7,16 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  flex-wrap: wrap;
   background: #ffd1d9;
   height: 100vh;
   transition: background .25s ease-in;
 }
 
 .circle {
-  width: 22vw;
-  height: 22vw;
+  width: 300px;
+  height: 300px;
   background: repeating-radial-gradient(circle at center, #333 10%, white 20%, #333 20%, white 30%);
+  border: 2px solid white;
   border-radius: 50%;
   transform: rotate(0deg);
   animation: rotate 7s ease-in-out infinite;
@@ -27,13 +27,15 @@ body {
   0%{
     transform: rotate(0deg);
     transform: scale(1);
+    background-position: 10%;
   }
   50%{
-    transform: scale(1.2);
+    transform: scale(1.15);
   }
   100%{
     transform: scale(1);
     transform: rotate(360deg);
+    background-position: 100%;
   }
 }
 
@@ -72,18 +74,14 @@ body {
 }
 
 @media (prefers-color-scheme: light) {
-	body {
-    background-color: #fff;
-  }
   .text{
-    background: #dfdfdf;
-    color: #fff;
+    color: #dfdfdf;
   }
   .text p{
     text-shadow: 3px 3px 0px #a19d9d;
   }
   .circle{
-    background: repeating-radial-gradient(circle at center, #fff 20%, #b7b7b7 20%, #fff 1%, #b7b7b7 30%);
+    background: repeating-radial-gradient(circle at 50%, #fff 20%, #ecc4c4 26%, #fff 1%, #f1cdcd 25%);
   }
 }
 

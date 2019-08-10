@@ -1,0 +1,94 @@
+@font-face {font-family:'GRADUATE'; src:url('GRADUATE.woff2');}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: #ffd1d9;
+  height: 100vh;
+  transition: background .25s ease-in;
+}
+
+.circle {
+  width: 22vw;
+  height: 22vw;
+  background: repeating-radial-gradient(circle at center, #333 10%, white 20%, #333 20%, white 30%);
+  border-radius: 50%;
+  transform: rotate(0deg);
+  /* animation: rotate 7s easse-in-out infinite; */
+  box-sizing: border-box;
+}
+
+@keyframes rotate{
+  0%{
+    transform: rotate(0deg);
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
+    transform: rotate(360deg);
+  }
+}
+
+.text{
+    text-align: center;
+    background-color: white;
+    color: #333;
+    padding: 1% 10%;
+    margin-bottom: 3%;
+    width: 100vw;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.text p{
+  font-size: 3.5rem;
+  font-family: GRADUATE;
+  margin: 0px;
+  padding: 0px;
+  animation: animateText 7s ease-in-out infinite;
+  text-shadow: 3px 3px 0px #c4c4c4;
+  overflow: hidden;
+  font-variation-settings: "XOPQ" 154.444, "XTRA" 100, "OPSZ" 8, "GRAD" 15.1944, "YTRA" 805.417, "CNTR" 0, "YOPQ" 100, "SERF" 0, "YTAS" 0, "YTLC" 650, "YTDE" 0, "SELE" 0;
+}
+
+@keyframes animateText{
+  0%{
+    font-variation-settings: "XOPQ" 154.444, "XTRA" 100, "OPSZ" 8, "GRAD" 15.1944, "YTRA" 805.417, "CNTR" 0, "YOPQ" 100, "SERF" 0, "YTAS" 0, "YTLC" 650, "YTDE" 0, "SELE" 0;
+  }
+  50%{
+    font-variation-settings: "XOPQ" 70.889, "XTRA" 800, "OPSZ" 16, "GRAD" 1.74826, "YTRA" 850, "CNTR" 100, "YOPQ" 100, "SERF" 0, "YTAS" 0, "YTLC" 650, "YTDE" 0, "SELE" 0;
+  }
+  100%{
+    font-variation-settings: "XOPQ" 154.444, "XTRA" 100, "OPSZ" 8, "GRAD" 15.1944, "YTRA" 805.417, "CNTR" 0, "YOPQ" 100, "SERF" 0, "YTAS" 0, "YTLC" 650, "YTDE" 0, "SELE" 0;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+	body {
+    background-color: #fff;
+  }
+  .text{
+    background: #dfdfdf;
+    color: #fff;
+  }
+  .text p{
+    text-shadow: 3px 3px 0px #a19d9d;
+  }
+  .circle{
+    background: repeating-radial-gradient(circle at center, #fff 20%, #b7b7b7 20%, #fff 1%, #b7b7b7 30%);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #333;
+	}
+}
